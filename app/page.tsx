@@ -84,7 +84,7 @@ export default function Home() {
                 <div className="container mx-auto px-4">
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-3 py-4 relative">
                         {/* Theme Toggle - positioned absolutely on the right */}
-                        <div className="absolute right-0 top-1/2 -translate-y-1/2">
+                        <div className="absolute right-0 top-4 md:top-1/2 md:-translate-y-1/2">
                             <button
                                 onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
                                 className={`p-3 rounded-xl transition-all duration-300 ${theme === 'dark'
@@ -98,7 +98,7 @@ export default function Home() {
                         </div>
 
                         {/* Centered Navigation Tabs */}
-                        <div className="flex flex-wrap items-center justify-center gap-3">
+                        <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 pr-12 md:pr-0">
                             {tabs.map((tab) => {
                                 const Icon = tab.icon;
                                 const isActive = activeTab === tab.id;
@@ -153,28 +153,28 @@ function AutorTab({ titleRef, subtitleRef, imageRef }: any) {
     return (
         <div className="space-y-20 pb-20">
             {/* Hero Section */}
-            <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+            <section className="relative min-h-[70vh] sm:min-h-[85vh] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 bg-[url('/images/gallery/anos40/1320411257.jpg')] bg-cover bg-center bg-no-repeat opacity-20 filter grayscale blur-sm"></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/90 to-slate-900/60 z-10"></div>
 
-                <div className="container mx-auto relative z-20 gap-12 items-center flex flex-col pt-12">
-                    <div className="text-center space-y-6 max-w-4xl mx-auto">
+                <div className="container mx-auto px-4 relative z-20 gap-6 md:gap-12 items-center flex flex-col pt-8 md:pt-12">
+                    <div className="text-center space-y-4 md:space-y-6 mx-auto w-full px-2 sm:px-0">
                         <h1
                             ref={titleRef}
-                            className="text-7xl md:text-9xl font-black text-transparent bg-clip-text bg-gradient-to-br from-amber-200 via-orange-400 to-amber-600 tracking-tighter drop-shadow-2xl"
+                            className="text-4xl min-[375px]:text-5xl sm:text-7xl md:text-9xl font-black text-transparent bg-clip-text bg-gradient-to-br from-amber-200 via-orange-400 to-amber-600 tracking-tighter drop-shadow-2xl leading-none"
                         >
                             GUANARTEME
                         </h1>
-                        <h2 className="text-3xl md:text-5xl text-amber-300/80 font-serif italic tracking-wide">
+                        <h2 className="text-xl min-[375px]:text-2xl sm:text-3xl md:text-5xl text-amber-300/80 font-serif italic tracking-tight sm:tracking-wide">
                             por Leandro Perdomo
                         </h2>
 
                         <div
                             ref={subtitleRef}
-                            className="inline-block mt-8 border border-amber-500/30 bg-slate-900/60 backdrop-blur-md p-6 rounded-2xl shadow-xl shadow-amber-900/20"
+                            className="inline-block w-full sm:w-auto mt-4 md:mt-8 border border-amber-500/30 bg-slate-900/60 backdrop-blur-md p-4 sm:p-6 rounded-2xl shadow-xl shadow-amber-900/20 mx-auto"
                         >
-                            <p className="text-amber-500 font-bold uppercase tracking-[0.3em] text-sm mb-3">Publicado en Falange: 5-5-1954</p>
-                            <p className="text-xl md:text-2xl text-slate-300 font-light leading-relaxed text-center italic">
+                            <p className="text-amber-500 font-bold uppercase tracking-wider sm:tracking-widest md:tracking-[0.3em] text-[10px] sm:text-xs md:text-sm mb-2 sm:mb-3">Publicado en Falange: 5-5-1954</p>
+                            <p className="text-base sm:text-xl md:text-2xl text-slate-300 font-light leading-relaxed text-center italic">
                                 "Guanarteme es, sencillamente, el barrio más importante que tiene la ciudad. Más que barrio, prolongación, proyección del apretado casco porteño."
                             </p>
                         </div>
