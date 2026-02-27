@@ -161,7 +161,7 @@ function AutorTab({ titleRef, subtitleRef, imageRef }: any) {
                     <div className="text-center space-y-4 md:space-y-6 mx-auto w-full px-2 sm:px-0">
                         <h1
                             ref={titleRef}
-                            className="text-4xl min-[375px]:text-5xl sm:text-7xl md:text-9xl font-black text-transparent bg-clip-text bg-gradient-to-br from-amber-200 via-orange-400 to-amber-600 tracking-tighter drop-shadow-2xl leading-none"
+                            className="text-3xl min-[390px]:text-4xl min-[500px]:text-5xl sm:text-7xl md:text-9xl font-black text-transparent bg-clip-text bg-gradient-to-br from-amber-200 via-orange-400 to-amber-600 tracking-tighter drop-shadow-2xl leading-none"
                         >
                             GUANARTEME
                         </h1>
